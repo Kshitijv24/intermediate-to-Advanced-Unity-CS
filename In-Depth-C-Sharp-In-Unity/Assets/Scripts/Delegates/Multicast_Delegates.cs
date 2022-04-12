@@ -9,6 +9,7 @@ public class Multicast_Delegates : MonoBehaviour
     {
         myMultiDelegate = Sphere;
         // here we are multicasting the delegate using +=
+
         myMultiDelegate += Sphere_Turning_Red;
         myMultiDelegate();
 

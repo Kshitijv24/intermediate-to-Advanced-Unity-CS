@@ -7,8 +7,6 @@ public class Delegates_Unity : MonoBehaviour
     // declaring member variable.
     MyDelegate myDelegate;
 
-    // all the functions must have the same signature as delegate to be used in delegate.
-
     private void Start()
     {
         // assigning the PrintNum Function in myDelegate.
@@ -21,6 +19,8 @@ public class Delegates_Unity : MonoBehaviour
         // using myDelegate as a Function.
         myDelegate(50);
     }
+
+    // all the functions must have the same signature as delegate to be used in delegate.
 
     private void PrintNum(int num)
     {

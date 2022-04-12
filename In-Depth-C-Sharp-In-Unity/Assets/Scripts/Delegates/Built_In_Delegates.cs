@@ -12,6 +12,8 @@ public class Built_In_Delegates : MonoBehaviour
     private Action<int, float> genericAction;
 
     // this is a delegate that will take generic parameters and return an data type.
+    // first is parameter and second is return type
+    // return type always will be the last one
     private Func<int, bool> funcDelegate;
 
     private void Start()
