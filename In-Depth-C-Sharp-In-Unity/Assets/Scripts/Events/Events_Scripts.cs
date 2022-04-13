@@ -14,17 +14,25 @@ public class Events_Scripts : MonoBehaviour
         //OnSpacePressed(this, EventArgs.Empty);
     }
 
+    // In Order to Subscribe to the event first we need to Define a Function that will reseve that Event.
+
+    // Function Signature needs to be same as the Event.
+    private void Function_OnSpacePressed(object sender, EventArgs e)
+    {
+        Debug.Log("Space is Pressed");
+    }
+
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            //if (OnSpacePressed != null)
-            //{
-            //    Event being fired
-            //    Calling the event Delegate to start the Event
+            if (OnSpacePressed != null)
+            {
+                //Event being fired
+                //Calling the event Delegate to start the Event
 
-            //    OnSpacePressed(this, EventArgs.Empty);
-            //}
+                OnSpacePressed(this, EventArgs.Empty);
+            }
 
             // C# 6.0 Shorthand Version of Checking if not null
 
@@ -33,14 +41,5 @@ public class Events_Scripts : MonoBehaviour
 
             //OnSpacePressed?.Invoke(this, EventArgs.Empty);
         }
-    }
-
-    // In Order to Subscribe to the event first we need to Define a Function that will reseve that Event.
-
-    // Function Signature needs to be same as the Event.
-
-    private void Function_OnSpacePressed(object sender, EventArgs e)
-    {
-        Debug.Log("Space is Pressed");
     }
 }
