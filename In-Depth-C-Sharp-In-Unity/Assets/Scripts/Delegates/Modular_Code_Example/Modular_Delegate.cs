@@ -6,7 +6,8 @@ public class Modular_Delegate : MonoBehaviour
 
     private void Start()
     {
-        //modular_Timer.SetTimer(1f, () => Debug.Log("Timer Completed"));
+        modular_Timer.SetTimer(1f, () => Debug.Log("Timer Completed"));
+
         modular_Timer.SetTimer(1f, MessageDelegate);
     }
 
