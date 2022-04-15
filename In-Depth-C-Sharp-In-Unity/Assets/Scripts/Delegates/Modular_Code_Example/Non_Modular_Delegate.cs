@@ -8,7 +8,7 @@ public class Non_Modular_Delegate : MonoBehaviour
 
     private void Start()
     {
-        timer.SetTimer(1f);
+        timer.SetTimer(0.5f);
     }
 
     private void Update()

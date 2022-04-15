@@ -16,6 +16,10 @@ public class Event_Subscriber : MonoBehaviour
     private void Event_Space_Button_Subscriber_Message(object sender, EventArgs eventArgs)
     {
         Debug.Log("Space Button is Pressed");
+
+        // removing an Event Function from a Publisher.
+        Event_Publisher event_Publisher = GetComponent<Event_Publisher>();
+        event_Publisher.OnSpacePressed -= Event_Left_Shift_Button_Subscriber_Message;
     }
 
     private void Event_Left_Shift_Button_Subscriber_Message(object sender, EventArgs eventArgs)

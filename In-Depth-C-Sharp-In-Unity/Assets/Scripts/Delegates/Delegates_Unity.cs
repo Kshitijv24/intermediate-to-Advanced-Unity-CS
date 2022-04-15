@@ -5,7 +5,7 @@ public class Delegates_Unity : MonoBehaviour
     // declaring delegate Template.
     private delegate void MyDelegate(int n);
     // declaring member variable.
-    MyDelegate myDelegate;
+    private MyDelegate myDelegate;
 
     private void Start()
     {
